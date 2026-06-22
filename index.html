@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTINUUM - Anticipe. Apaise.</title>
+    <!-- Intégration de Tailwind CSS pour un prototypage ultra-rapide -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Polices Google : Playfair Display pour le côté Luxe/Editorial, Inter pour la lisibilité -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F5F2EB', // Le fond crème de vos slides
+                        gold: '#A68A56',  // Le doré de votre texte
+                        dark: '#2C2C2C',  // Gris très foncé pour le texte
+                        brandGreen: '#327D77' // Le vert de votre UI
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animations douces d'apparition */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-cream text-dark font-sans antialiased">
+
+    <!-- En-tête -->
+    <header class="py-8 px-6 text-center">
+        <div class="text-gold font-serif text-2xl tracking-widest italic mb-2">CONTINUUM</div>
+        <div class="text-xs tracking-[0.2em] text-gray-500 uppercase">Bijou · Bien-être · Anticipation</div>
+    </header>
+
+    <!-- Section Hero -->
+    <main class="max-w-5xl mx-auto px-6 py-12 flex flex-col items-center text-center">
+        
+        <h1 class="text-5xl md:text-7xl font-serif mb-6 fade-in-up">
+            Anticipe. <span class="text-gold italic">Apaise.</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl font-light text-gray-600 max-w-2xl mb-12 fade-in-up delay-100">
+            La première bague joaillière qui détecte et calme les bouffées de chaleur sans médicament, en temps réel.
+        </p>
+
+        <!-- Espace pour l'image de la bague -->
+        <div class="w-full max-w-md aspect-square rounded-2xl shadow-2xl overflow-hidden mb-16 fade-in-up delay-200 relative flex items-center justify-center transition-transform duration-700 hover:scale-105">
+            <img src="continuum.png" alt="Bague technologique Continuum en or 18k" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Section 3 Piliers (Safe pour le public) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full text-left fade-in-up delay-300">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-50">
+                <div class="text-gold font-serif text-xl mb-3">Détecter</div>
+                <p class="text-sm text-gray-600 font-light leading-relaxed">
+                    Analyse continue et invisible des biomarqueurs via nos capteurs de grade médical intégrés sous le verre saphir.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-50">
+                <div class="text-gold font-serif text-xl mb-3">Refroidir</div>
+                <p class="text-sm text-gray-600 font-light leading-relaxed">
+                    Activation instantanée d'une fraîcheur localisée pour induire une vasoconstriction réflexe et freiner la montée thermique.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-50">
+                <div class="text-gold font-serif text-xl mb-3">Apaiser</div>
+                <p class="text-sm text-gray-600 font-light leading-relaxed">
+                    Micro-vibrations rythmiques guidant la respiration vers la cohérence cardiaque pour basculer le système nerveux en mode parasympathique.
+                </p>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mt-20 fade-in-up delay-300">
+            <h2 class="text-2xl font-serif mb-6">Découvrez l'expérience Continuum</h2>
+            <button class="bg-[#8E733D] hover:bg-[#7A6233] text-white px-8 py-3 rounded-full font-medium transition duration-300 shadow-lg">
+                Rejoindre la liste d'attente
+            </button>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 py-8 border-t border-gray-200 text-center text-sm text-gray-400">
+        &copy; 2026 CONTINUUM. Projet de Hackathon.
+    </footer>
+
+</body>
+</html>
